@@ -1,12 +1,12 @@
 {
     "auth": {	
-        "registry.cn-shenzhen.aliyuncs.com": {
+        "registry.cn-hangzhou.aliyuncs.com": {
             "username": "USER",
             "password": "PASS"
         }
     },
     "images": {
-        "kolla/centos-source-almanach-api:train":"registry.cn-shenzhen.aliyuncs.com/kollaimage/centos-source-almanach-api:train",
+        "kolla/centos-source-almanach-api:train":"registry.cn-hangzhou.aliyuncs.com/kolla-momo/centos-source-almanach-api:train",
         "kolla/centos-source-almanach-base:train":"registry.cn-shenzhen.aliyuncs.com/kollaimage/centos-source-almanach-base:train",
         "kolla/centos-source-almanach-collector:train":"registry.cn-shenzhen.aliyuncs.com/kollaimage/centos-source-almanach-collector:train",
         "kolla/centos-source-aodh-api:train":"registry.cn-shenzhen.aliyuncs.com/kollaimage/centos-source-aodh-api:train",
