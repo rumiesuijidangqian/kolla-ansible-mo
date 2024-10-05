@@ -22,6 +22,7 @@ env:
   OPENSTACK_RELEASE: 2023.1
   ALIYUN_REGISTRY: registry.cn-hangzhou.aliyuncs.com
   ALIYUN_NAMESPACE: kolla-momo
+  QQ: aarch64
 
 jobs:
   get-kolla-images:
@@ -70,7 +71,7 @@ jobs:
         do
           echo [$icount/$count]: $image
           docker pull $DOCKER_NAMESPACE/$image:${OPENSTACK_RELEASE}-${KOLLA_BASE_DISTRO}|| true
-          docker tag $DOCKER_NAMESPACE/$image:${OPENSTACK_RELEASE}-${KOLLA_BASE_DISTRO} $ALIYUN_REGISTRY/$ALIYUN_NAMESPACE/$image:${OPENSTACK_RELEASE}-${KOLLA_BASE_DISTRO}-aarch64 || true
+          docker tag $DOCKER_NAMESPACE/$image:${OPENSTACK_RELEASE}-${KOLLA_BASE_DISTRO} $ALIYUN_REGISTRY/$ALIYUN_NAMESPACE/$image:${OPENSTACK_RELEASE}-${KOLLA_BASE_DISTRO}-${QQ} || true
           docker push $ALIYUN_REGISTRY/$ALIYUN_NAMESPACE/$image:${OPENSTACK_RELEASE}-${KOLLA_BASE_DISTRO} || true
           ((icount++))
         done
